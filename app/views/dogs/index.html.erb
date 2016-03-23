@@ -1,0 +1,16 @@
+<h1>DOGS INDEX PAGE</h1>
+
+<% @pets.each do |dog| %>
+	<p>
+	NAME: <%= dog.name %><br>
+	AGE: <%= dog.age %><br>
+	ID: <%= dog.id %><br>
+	SEX: <%= dog.sex %><br>
+	MIX: <%= dog.mix %><br>
+	SHELTERID: <%= dog.shelter_id %>
+	<%#= dog.media.photos.photo(1) %> <br>
+	</p>
+<% end %>
+
+@pets is
+<%= @pets %>
