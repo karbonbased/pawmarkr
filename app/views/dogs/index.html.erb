@@ -7,10 +7,34 @@
 	ID: <%= dog.id %><br>
 	SEX: <%= dog.sex %><br>
 	MIX: <%= dog.mix %><br>
-	SHELTERID: <%= dog.shelter_id %>
+	SHELTERID: <%= dog.shelter_id %><br>
+	EMAIL: <%= dog.contact %><br>
+	STATUS: <%= dog.status %>
+	<br>
+	SIZE: <%= dog.size %>
+	<br>
+	<span> PHOTO: <%#= dog.photo %> </span>
+	<br>
+	<b>TEST: <%#= dog.media[1] %>
+	<%= dog.contact %>
+	</b>
+	<br>
+	LAST UDPATED:
+	<%= dog.last_update %>
+	<br>
+	<span><a>BREED:::FIRST BREED IN BREED ARRAY</a><%= dog.breeds[0] %></span>
 	<%#= dog.media.photos.photo(1) %> <br>
 	</p>
 <% end %>
 
+<h2>PUPS IS</h2>
+<%= @pups %>
+<hr>
+PUP 1
+<%# @pups each do |dog| %>
+<%#= dog.name %>
+<%# end %>
+
+<hr>
 @pets is
 <%= @pets %>
