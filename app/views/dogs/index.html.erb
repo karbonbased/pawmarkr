@@ -24,6 +24,9 @@
 	<br>
 	<span><a>BREED:::FIRST BREED IN BREED ARRAY</a><%= dog.breeds[0] %></span>
 	<%#= dog.media.photos.photo(1) %> <br>
+	<%= link_to "SHOW PAGE", dog_path(dog.id) %>
+	<br>
+	<%= link_to "LOCATION PAGE", shelters_path(dog.shelter_id) %>
 	</p>
 <% end %>
 

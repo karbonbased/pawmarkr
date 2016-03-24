@@ -2,6 +2,8 @@ Rails.application.routes.draw do
  root 'dogs#index'
  resources :dogs
  get 'test' => 'dogs#test'
+ get 'shelters' => 'dog#shelter'
+ get 'shelter/:id' => 'shelter#show'
 end
 
 #   Prefix Verb   URI Pattern              Controller#Action
@@ -15,3 +17,5 @@ end
 #          PUT    /dogs/:id(.:format)      dogs#update
 #          DELETE /dogs/:id(.:format)      dogs#destroy
 #     test GET    /test(.:format)          dogs#test
+# shelters GET    /shelters(.:format)      dog#shelter
+#          GET    /shelter/:id(.:format)   shelter#show

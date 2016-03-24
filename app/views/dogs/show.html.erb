@@ -1,0 +1,19 @@
+<h1>DOG SHOW PAGE</h1>
+
+<%= @dog.name %>
+<br>
+<% shelter = @dog.shelter_id %>
+<%= @dog.shelter_id %>
+<br>
+shelter variable is 
+<%= shelter %>
+<p>
+	<%#= link_to "GET SHELTER ADDRESS", shelters_path('NY805') %>
+	<%= link_to "GET SHELTER ADDRESS", test_path(:id) %>
+
+</p>
+
+<p>
+	DOG BREEDS ARE:
+	<%= @breeds %>
+</p>
