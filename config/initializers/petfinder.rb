@@ -4,3 +4,6 @@ Petfinder.configure do |config|
 end
 
 $petfinder = Petfinder::Client.new
+
+
+$petfinder = Petfinder

@@ -9,10 +9,16 @@ class DogsController < ApplicationController
 		puts "====@pets is=========="
 		puts @pets.to_xml
 		puts "=============="
+
 	end
 
 	def show
 		@dog = $petfinder.pet(params[:id])
+
+		puts "==============="
+		p @dog
+		puts @dog.class
+		puts "==============="
 
 		# @breeds = $petfinder.breed('dog')
 
@@ -29,7 +35,6 @@ class DogsController < ApplicationController
 	end
 
 	def shelter
-		# @shelter = $petfinder.shelter(params[:id])
 		@shelter = $petfinder.shelter(params[:id])
 
 	end
