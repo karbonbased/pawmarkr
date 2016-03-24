@@ -26,6 +26,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #adding PETFINDER API
 gem 'petfinder'
 
+#adding GEOCODER GEM to convert address to lat long
+gem 'geocoder'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
