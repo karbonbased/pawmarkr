@@ -6,15 +6,18 @@ class DogsController < ApplicationController
 		puts "=============="
 		@pets = $petfinder.find_pets('dog', '11211', count:10)
 		@pets.count
-		puts "====@pets is=========="
-		puts @pets.to_xml
-		puts "=============="
+
 
 	end
 
 	def show
 		@dog = $petfinder.pet(params[:id])
 
+		@bla = @dog.shelter_id
+puts "==============="
+		puts @shelter_id
+		puts @shelter_id.class
+puts "==============="
 		puts "==============="
 		p @dog
 		puts @dog.class
@@ -35,7 +38,8 @@ class DogsController < ApplicationController
 	end
 
 	def shelter
-		@shelter = $petfinder.shelter(params[:id])
+		@dog = $petfinder.pet(params[:id])
+		@shelter = @dog.shelter_id
 
 	end
 

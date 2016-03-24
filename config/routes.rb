@@ -3,7 +3,7 @@ Rails.application.routes.draw do
  resources :dogs
  get 'test' => 'dogs#test'
  get 'shelter' => 'dog#shelter'
- get 'shelter/:id' => 'shelter#show'
+ get 'shelter/:bla' => 'shelter#show'
  resources :maps
 end
 
@@ -19,7 +19,7 @@ end
 #          DELETE /dogs/:id(.:format)      dogs#destroy
 #     test GET    /test(.:format)          dogs#test
 #  shelter GET    /shelter(.:format)       dog#shelter
-#          GET    /shelter/:id(.:format)   shelter#show
+#          GET    /shelter/:bla(.:format)  shelter#show
 #     maps GET    /maps(.:format)          maps#index
 #          POST   /maps(.:format)          maps#create
 #  new_map GET    /maps/new(.:format)      maps#new
