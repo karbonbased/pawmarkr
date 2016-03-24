@@ -26,6 +26,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #adding PETFINDER API
 gem 'petfinder'
 
+#adding HTTPARTY
+gem 'httparty'
+
 #adding GEOCODER GEM to convert address to lat long
 gem 'geocoder'
 
