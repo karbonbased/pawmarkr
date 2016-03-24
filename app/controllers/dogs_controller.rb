@@ -38,8 +38,7 @@ puts "==============="
 	end
 
 	def shelter
-		@dog = $petfinder.pet(params[:id])
-		@shelter = @dog.shelter_id
+		@shelter = $petfinder.shelter(params[:id])
 
 	end
 
