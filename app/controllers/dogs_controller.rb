@@ -7,8 +7,6 @@ class DogsController < ApplicationController
 		@pets = $petfinder.find_pets('dog', '11211', count:10)
 		@pets.count
 
-		@response = HTTParty.get('http://api.stackexchange.com/2.2/questions?site=stackoverflow')
-
 
 
 	end
@@ -31,13 +29,11 @@ puts "==============="
 	end
 
 	def test
-		@dog = $petfinder.pet('31564331')
-		respond_to do |format|
-    		format.html
-    		format.json{
-     	 	render :json => @dog.to_json
-  		  }
-  		end
+		# @response = HTTParty.get('http://api.stackexchange.com/2.2/questions?site=stackoverflow')
+		@response = HTTParty.get('http://rubygems.org/api/v1/versions/httparty.json')
+		puts "==============="
+		puts @response
+		puts "==============="
 	end
 
 	def shelter
