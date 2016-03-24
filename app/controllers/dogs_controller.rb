@@ -30,10 +30,10 @@ puts "==============="
 
 	def test
 		# @response = HTTParty.get('http://api.stackexchange.com/2.2/questions?site=stackoverflow')
-		@response = HTTParty.get('http://rubygems.org/api/v1/versions/httparty.json')
-		puts "==============="
-		puts @response
-		puts "==============="
+		# @response = HTTParty.get('http://rubygems.org/api/v1/versions/httparty.json')
+		# puts "==============="
+		# puts @response
+		# puts "==============="
 	end
 
 	def shelter
