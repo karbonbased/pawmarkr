@@ -7,6 +7,9 @@ class DogsController < ApplicationController
 		@pets = $petfinder.find_pets('dog', '11211', count:10)
 		@pets.count
 
+		@response = HTTParty.get('http://api.stackexchange.com/2.2/questions?site=stackoverflow')
+
+
 
 	end
 
