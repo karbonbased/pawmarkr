@@ -4,15 +4,27 @@ class DogsController < ApplicationController
 		puts "=============="
 		p $petfinder
 		puts "=============="
-		@pets = $petfinder.find_pets('dog', '11211', age:'baby', count:20)
-		@pets.count
+		@pets = $petfinder.find_pets('dog', '11211', count:20) #add option like this.... age:'baby'
+		puts @pets.count
 		@pets#picture
 		puts "***************************"
 		puts "****    @pets is   ********"
 		p @pets
 		puts "***************************"
 
+		@pets.each do |dog|
+			Dog.find_or_create_by(name:dog.name, 
+				age:dog.age, 
+				gender:dog.sex, 
+				contact:dog.contact,
+				breeds: dog.breeds.each do |breed|
+					breed
+				end
 
+				)
+
+
+		end
 
 	end
 
@@ -34,12 +46,8 @@ puts "==============="
 	end
 
 	def test
-		# @response = HTTParty.get('http://api.stackexchange.com/2.2/questions?site=stackoverflow')
-		# @response = HTTParty.get('http://rubygems.org/api/v1/versions/httparty.json')
-		# puts "==============="
-		# puts @response
-		# puts "==============="
-		@animal = Animal.find(1)
+		@pets = $petfinder.find_pets('dog', '11211', count:20)
+		
 	end
 
 	def shelter

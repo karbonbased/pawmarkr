@@ -1,7 +1,62 @@
-<%#= @response["items"][4]["owner"] %>
+<h1>DOGS INDEX PAGE</h1>
+
+
+
+<% @pets.each do |dog| %>
+	<p>
+	NAME: <%= dog.name %><br>
+	AGE: <%= dog.age %><br>
+	ID: <%= dog.id %><br>
+	SEX: <%= dog.sex %><br>
+	MIX: <%= dog.mix %><br>
+	SHELTERID: <%= dog.shelter_id %><br>
+	EMAIL: <%= dog.contact %><br>
+	STATUS: <%= dog.status %><br>
+	ANIMAL: <%= dog.animal %>
+	<br>
+	SIZE: <%= dog.size %>
+	<br>
+	<span> PHOTO: <%#= dog.photo %> </span>
+	<br>
+	<b>TEST: <%#= dog.media[1] %>
+	<%= dog.contact %>
+	</b>
+	<br>
+	LAST UDPATED:
+	<%= dog.last_update %>
+	<br>
+	ALL BREEDS? <%= dog.breeds %>
+	<br>
+	<br>
+	CAN WE ITERATE BREEDS? <br>
+	<% dog.breeds.each do |this| %>
+	<%= this %><br>
+	<% end %>
+	<br>
+	<span><a>BREED:::FIRST BREED IN BREED ARRAY</a><%= dog.breeds[0] %></span>
+	<%#= dog.media.photos.photo(1) %> <br>
+	///////////////////////////<br>
+	///////@photos is////////<br>
+	<%#= dog.pictures %>
+	<%= @large %><br>
+	//////////////////////////
+	<br>
+<br>
+	<%= link_to "SHOW PAGE", dog_path(dog.id) %>
+	<br>
+	<%= link_to "LOCATION PAGE", shelter_path(dog.shelter_id) %>
+	</p>
+<% end %>
+
+<h2>PUPS IS</h2>
+<%= @pups %>
 <hr>
-<%#= @response["items"][4]["owner"]["display_name"] %>
-<hr>
-<!-- <%= @response %> -->
+PUP 1
+<%# @pups each do |dog| %>
+<%#= dog.name %>
+<%# end %>
 
 <hr>
+@pets [1] is
+<%#= @pets[1].media %>
+
