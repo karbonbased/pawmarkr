@@ -4,8 +4,13 @@ class DogsController < ApplicationController
 		puts "=============="
 		p $petfinder
 		puts "=============="
-		@pets = $petfinder.find_pets('dog', '11211', count:10)
+		@pets = $petfinder.find_pets('dog', '11211', age:'baby', count:20)
 		@pets.count
+		@pets#picture
+		puts "***************************"
+		puts "****    @pets is   ********"
+		p @pets
+		puts "***************************"
 
 
 
@@ -34,6 +39,7 @@ puts "==============="
 		# puts "==============="
 		# puts @response
 		# puts "==============="
+		@animal = Animal.find(1)
 	end
 
 	def shelter
