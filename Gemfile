@@ -29,9 +29,6 @@ gem 'petfinder'
 #adding HTTPARTY
 gem 'httparty'
 
-#adding RESCUEGROUPS.ORG GEM
-gem 'rescue_groups'
-
 #adding GEOCODER GEM to convert address to lat long
 gem 'geocoder'
 
